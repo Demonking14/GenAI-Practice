@@ -1,0 +1,17 @@
+{
+    "name": null,
+    "input_variables": [
+        "length_input",
+        "paper_input",
+        "style_input"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": " Please write the small research paper on  \"{paper_input}\"with the following  specifications:\n    Explanation style:{style_input}\n    Explanation Length: {length_input}\n    1. Mathematical Details:\n    -Include relevant mathematical equations if possible\n    -Explain the mathematical concepts using simple , intuitive code snippets where applicable. \n    Ensure the research paper  is clear, accurate, and aligned with the provided style and length.\n    ",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
