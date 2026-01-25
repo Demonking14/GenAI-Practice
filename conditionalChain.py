@@ -12,7 +12,7 @@ class Feedback(BaseModel):
     sentiment : Literal['positive' , 'negative'] = Field(description='Sentiment of the given feedback')
 
 class FeedbackResponse(BaseModel):
-    feebackResponse : str = Field(description='2 line response for the following feeeback')
+    feedbackResponse : str = Field(description='2 line response for the following feeeback')
 
 
 parser1 = StrOutputParser()
