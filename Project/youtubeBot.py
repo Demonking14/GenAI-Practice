@@ -1,4 +1,3 @@
-from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled , NoTranscriptFound
 from  langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings , ChatGoogleGenerativeAI
@@ -9,10 +8,9 @@ from langchain_core.output_parsers import StrOutputParser
 import os
 import sys
 import yt_dlp
+import streamlit as st
 load_dotenv()
 
-video_id = "3E8IGy6I9Wo"
-# cookie_path ="www.youtube.com_cookies.txt"
 transcript=""
 video_url = f"https://www.youtube.com/watch?v=3E8IGy6I9Wo"
 # try:
@@ -81,4 +79,4 @@ parallel_chain= RunnableParallel({
 parser = StrOutputParser()
 main_chain = parallel_chain | prompt | llm |parser
 
-print(main_chain.invoke("Can you summarize the video"))
+print(main_chain.invoke("did linus talked about changing file extensions on windows"))
